@@ -43,7 +43,7 @@ The App communicates with three services to function:
 
 Your Yahoo tokens and device token are retained for as long as you use the App. If you want your data deleted, you can:
 
-1. **Sign out of the App** (Settings → Sign Out) — this removes your tokens from the App's local Keychain.
+1. **Delete your account in-app** Settings → Account → Delete account) — this immediately removes all server-side data (Yahoo tokens, device tokens, cached roster data) and signs you out. The action is irreversible.
 2. **Email us** at the support address below and request full deletion of your server-side records. We will delete your Yahoo tokens, your Yahoo GUID, and any registered device tokens within seven (7) days of the request.
 3. **Revoke access from Yahoo directly** — visit https://login.yahoo.com/account/preferences/apps to remove Batter Up Fantasy's access at any time. This immediately invalidates our stored tokens.
 
