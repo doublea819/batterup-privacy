@@ -14,6 +14,8 @@ The App collects only what is necessary to deliver its core functionality:
 
 3. **Your Yahoo profile identifier (GUID) and nickname** — Returned by Yahoo at sign-in time, used to look up your rosters and personalize the in-app greeting.
 
+4. **Your ESPN Fantasy session cookies** — If you choose to connect ESPN Fantasy, your ESPN session cookies (SWID and espn_s2) are captured from the in-app WebView after you sign in on ESPN.com. **We never see your ESPN password** — you enter it directly on ESPN's login page. We store these cookies server-side (in Cloudflare KV) to read your ESPN fantasy rosters on your behalf.
+
 ## What we do NOT collect
 
 - We do not collect your name, email address, phone number, or any other contact information beyond what Yahoo's nickname field provides.
@@ -34,8 +36,9 @@ Your device token is used only to deliver push notifications about your rostered
 
 **Nobody.** We do not sell, rent, or share your data with third parties. There are no advertisers, no analytics providers, no data brokers involved.
 
-The App communicates with three services to function:
+The App communicates with four services to function:
 - **Yahoo Fantasy Sports API** (api.login.yahoo.com and fantasysports.yahooapis.com) — for OAuth and roster data
+- - **ESPN Fantasy API** (fan.api.espn.com and lm-api-reads.fantasy.espn.com) — for reading your fantasy rosters if you've connected ESPN
 - **MLB StatsAPI** (statsapi.mlb.com) — for public game schedules, lineups, and player stats; no personal data is sent
 - **Apple Push Notification service** (api.push.apple.com) — for delivering notifications
 
@@ -46,6 +49,7 @@ Your Yahoo tokens and device token are retained for as long as you use the App. 
 1. **Delete your account in-app** Settings → Account → Delete account) — this immediately removes all server-side data (Yahoo tokens, device tokens, cached roster data) and signs you out. The action is irreversible.
 2. **Email us** at the support address below and request full deletion of your server-side records. We will delete your Yahoo tokens, your Yahoo GUID, and any registered device tokens within seven (7) days of the request.
 3. **Revoke access from Yahoo directly** — visit https://login.yahoo.com/account/preferences/apps to remove Batter Up Fantasy's access at any time. This immediately invalidates our stored tokens.
+4. **Revoke access from ESPN directly** — sign out of espn.com in any browser. This invalidates the session cookies we stored.
 
 ## Children
 
